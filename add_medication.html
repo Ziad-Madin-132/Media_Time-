@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediTime - Medication Management</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background-image: url(back.jpeg)">
+    <nav>
+      <h1 class="logo">MediaTime</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="add_medication.html">Medications</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="about.html">About MediTime</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <section class="medication-section">
+      <img src="logo.png" alt="MediTime Logo" class="site-logo" />
+      <p></p>
+
+      <section class="about-container">
+        <h2>🎯 Vision</h2>
+        <p>
+          We aim for MediTime to be the leading platform for smart medication
+          and dosage management.
+        </p>
+
+        <h2>📜 Mission</h2>
+        <p>
+          Helping patients stay committed to treatment schedules through
+          accurate alerts and reminders.
+        </p>
+
+        <h2>⚡ Goal</h2>
+        <p>Reduce missed doses and improve treatment outcomes.</p>
+      </section>
+      <h2 style="text-align: center; color: white">Add New Medication</h2>
+
+      <form id="medicationForm">
+        <label for="drugName">Medication Name:</label>
+        <input type="text" id="drugName" required />
+
+        <label for="disease">Disease Type:</label>
+        <select id="disease" required>
+          <option value="Blood Pressure">Blood Pressure</option>
+          <option value="Diabetes">Diabetes</option>
+          <option value="Heart">Heart</option>
+          <option value="Stomach">Stomach</option>
+          <option value="Liver">Liver</option>
+          <option value="Kidney">Kidney</option>
+          <option value="Lung">Lung</option>
+          <option value="Nerves">Nerves</option>
+          <option value="Bones">Bones</option>
+          <option value="Dermatology">Dermatology</option>
+          <option value="Eyes">Eyes</option>
+          <option value="Ear">Ear</option>
+          <option value="Teeth">Teeth</option>
+          <option value="Thyroid">Thyroid</option>
+          <option value="Immunity">Immunity</option>
+          <option value="Cancer">Cancer</option>
+          <option value="Chronic Headache">Chronic Headache</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="drugType">Medication Type:</label>
+        <select id="drugType" required>
+          <option value="Tablet">Tablet</option>
+          <option value="Capsule">Capsule</option>
+          <option value="Liquid">Liquid</option>
+          <option value="Injection">Injection</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="chronic">Is the disease chronic?</label>
+        <select id="chronic" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label for="doses">Number of doses:</label>
+        <input type="number" id="doses" min="1" value="1" />
+
+        <label for="firstDose">First dose time:</label>
+        <input type="time" id="firstDose" required />
+
+        <label for="interval">Interval (hours):</label>
+        <input type="number" id="interval" min="1" value="8" required />
+
+        <button type="submit">Add</button>
+      </form>
+
+      <h3 style="text-align: center; color: white">Registered Medications</h3>
+      <table id="medicationTable">
+        <thead>
+          <tr>
+            <th>Medication</th>
+            <th>Disease Type</th>
+            <th>Medication Type</th>
+            <th>Chronic?</th>
+            <th>Last Dose</th>
+            <th>Next Dose</th>
+            <th>Remaining Doses</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <script defer src="script.js"></script>
+  </body>
+</html>

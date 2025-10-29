@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediTime - Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <h1 class="logo">MediaTime</h1>
+      <ul>
+        <li><a href="index.html">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="about.html">About MediTime</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <section class="login-section">
+      <img src="logo.png" alt="MediTime Logo" class="site-logo" />
+      <h2 style="text-align: center">Login</h2>
+      <form id="loginForm" action="" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit">Login</button>
+      </form>
+
+      <p class="signup-link" style="text-align: center">
+        Don't have an account? <a href="signup.html">Sign Up</a>
+      </p>
+    </section>
+    <script defer src="script.js"></script>
+  </body>
+</html>

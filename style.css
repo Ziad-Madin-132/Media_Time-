@@ -1,0 +1,242 @@
+/* ===== التصميم العام ===== */
+body {
+  font-family: "Tajawal", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  direction: ltr;
+}
+
+nav {
+  background: #2c3e50;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  flex-wrap: wrap;
+}
+
+nav .logo {
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background: #34495e;
+}
+
+/* ===== الشعار ===== */
+.site-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #2c3e50;
+  display: block;
+  margin: 15px auto;
+}
+
+/* ===== الفورم ===== */
+form {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background: #27ae60;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+form button:hover {
+  background: #219150;
+}
+
+/* ===== الجدول ===== */
+table {
+  width: 95%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background: #2980b9;
+  color: white;
+}
+
+/* ===== النصائح ===== */
+.tips-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.tip {
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tip i {
+  font-size: 22px;
+}
+
+.tip:nth-child(5n + 1) {
+  background: #e74c3c;
+}
+.tip:nth-child(5n + 2) {
+  background: #3498db;
+}
+.tip:nth-child(5n + 3) {
+  background: #2ecc71;
+}
+.tip:nth-child(5n + 4) {
+  background: #9b59b6;
+}
+.tip:nth-child(5n + 5) {
+  background: #f39c12;
+}
+
+/* ===== about ===== */
+.about-container {
+  padding: 25px;
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+}
+
+.about-container h2 {
+  color: #2c3e50;
+  border-right: 5px solid #27ae60;
+  padding-right: 10px;
+}
+
+/* ===== footer ===== */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  margin-top: 20px;
+}
+
+/* ===== Media Queries للتجاوب ===== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav .logo {
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 0;
+    border-top: 1px solid #34495e;
+  }
+}
+
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  table {
+    font-size: 14px;
+    overflow-x: auto;
+    display: block;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  .tips-container {
+    grid-template-columns: 1fr;
+  }
+
+  .tip {
+    flex-direction: column;
+    text-align: center;
+  }
+}

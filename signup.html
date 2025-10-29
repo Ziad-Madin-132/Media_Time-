@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediTime - Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <h1 class="logo">MediaTime</h1>
+      <ul>
+        <li><a href="index.html">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="about.html">About MediTime</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <section class="signup-section">
+      <img src="logo.png" alt="MediTime Logo" class="site-logo" />
+      <h2 style="text-align: center">Create a New Account</h2>
+      <form id="signupForm" action="" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="newEmail" name="newEmail" required />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="newPassword"
+          name="newPassword"
+          required
+          minlength="8"
+          maxlength="20"
+          title="Password must be between 8 and 20 characters"
+        />
+
+        <label for="phone">Phone Number:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          pattern="\d{11}"
+          maxlength="11"
+          minlength="11"
+          title="Please enter exactly 11 digits"
+        />
+
+        <button type="submit">Sign Up</button>
+      </form>
+      <p
+        style="text-align: center"
+        id="signupMessage"
+        class="success-message"
+      ></p>
+    </section>
+    <script defer src="script.js"></script>
+  </body>
+</html>
